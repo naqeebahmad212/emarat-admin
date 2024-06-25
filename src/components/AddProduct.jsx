@@ -47,6 +47,19 @@ const AddProduct = () => {
     }
   };
   const Add_Product = async () => {
+    if (
+      productDetails.name === "" ||
+      productDetails.category === "" ||
+      productDetails.new_price === "" ||
+      productDetails.aGradePrice === "" ||
+      productDetails.bGradePrice === "" ||
+      productDetails.brand === "" ||
+      productDetails.unit === "" ||
+      productDetails.description === "" ||
+      productDetails.size === ""
+    ) {
+      return toast.error("Please fill all the fields");
+    }
     // console.log(productDetails)
     let responseData;
     let product = productDetails;
