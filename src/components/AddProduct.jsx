@@ -97,6 +97,19 @@ const AddProduct = () => {
           data.success
             ? toast.success("Product Uploaded Successful")
             : toast.error("Upload Failed");
+
+          setProductDetails({
+            name: "",
+            image: "",
+            category: "",
+            new_price: "",
+            aGradePrice: "",
+            bGradePrice: "",
+            brand: "",
+            unit: "",
+            description: "",
+            size: "",
+          });
         });
     }
   };
